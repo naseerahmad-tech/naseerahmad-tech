@@ -1,6 +1,203 @@
----
-layout: home
-title: Home
----
-# Welcome to my blog
-This is my first post!
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naseer | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2563eb', // Blue-600
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .dark ::-webkit-scrollbar-track { background: #0f172a; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-xl font-bold tracking-tight text-brand dark:text-blue-400">Naseer<span class="text-slate-800 dark:text-white">.dev</span></a>
+                
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-brand dark:hover:text-blue-400 transition">About</a>
+                    <a href="#skills" class="hover:text-brand dark:hover:text-blue-400 transition">Skills</a>
+                    <a href="#projects" class="hover:text-brand dark:hover:text-blue-400 transition">Projects</a>
+                    <a href="#experience" class="hover:text-brand dark:hover:text-blue-400 transition">Experience</a>
+                </div>
+
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="mb-6 flex justify-center">
+                <!-- REPLACE WITH YOUR GITHUB AVATAR URL -->
+                <img src="https://github.com/github.png" alt="Profile" class="w-32 h-32 rounded-full border-4 border-white dark:border-slate-800 shadow-xl">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                Hi, I'm <span class="text-brand dark:text-blue-400">Naseer</span>
+            </h1>
+            <h2 class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8 font-mono">
+                &lt;Full Stack Developer /&gt;
+            </h2>
+            <p class="text-lg max-w-2xl mx-auto mb-10 text-slate-600 dark:text-slate-300">
+                I build scalable backend systems, microservices, and modern web applications using .NET, Angular, and Cloud technologies.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="bg-brand text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">View My Work</a>
+                <a href="https://github.com/your-username" target="_blank" class="border border-slate-300 dark:border-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white dark:bg-slate-800/50">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="w-8 h-1 bg-brand rounded"></span> Technical Skills
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand dark:hover:border-blue-400 transition">
+                    <i class="fas fa-server text-2xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Backend</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">ASP.NET Core 8/10, C#, Entity Framework Core, Clean Architecture, CQRS, MediatR, RabbitMQ.</p>
+                </div>
+                <!-- Skill Card 2 -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand dark:hover:border-blue-400 transition">
+                    <i class="fas fa-laptop-code text-2xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Frontend</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Angular 17+, TypeScript, Signals, RxJS, Tailwind CSS, Standalone Components.</p>
+                </div>
+                <!-- Skill Card 3 -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand dark:hover:border-blue-400 transition">
+                    <i class="fas fa-database text-2xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Database & Cache</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">SQL Server, Redis (Caching & Sessions), PostgreSQL, MongoDB.</p>
+                </div>
+                <!-- Skill Card 4 -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand dark:hover:border-blue-400 transition">
+                    <i class="fas fa-cloud text-2xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Cloud & DevOps</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Docker, Kubernetes, GitHub Actions, Azure, CI/CD pipelines.</p>
+                </div>
+                <!-- Skill Card 5 -->
+                <div class="p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-brand dark:hover:border-blue-400 transition">
+                    <i class="fas fa-shield-alt text-2xl text-brand mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Security & Auth</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">JWT, OAuth2, Identity Server, API Gateway (YARP/Ocelot).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="w-8 h-1 bg-brand rounded"></span> Featured Projects
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold group-hover:text-brand dark:group-hover:text-blue-400 transition">Microservices E-Commerce</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                            A scalable e-commerce backend using .NET Core Clean Architecture, API Gateway, RabbitMQ for event-driven communication, and Redis for caching.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-brand dark:text-blue-400">
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">.NET 8</span>
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">RabbitMQ</span>
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">Redis</span>
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold group-hover:text-brand dark:group-hover:text-blue-400 transition">Real-time Dashboard</h3>
+                            <a href="#" class="text-slate-400 hover:text-brand"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                            A real-time analytics dashboard using Angular 17 Signals and ASP.NET Core SignalR. Features JWT authentication and role-based access control.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-brand dark:text-blue-400">
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">Angular</span>
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">SignalR</span>
+                            <span class="bg-blue-50 dark:bg-slate-900 px-2 py-1 rounded">JWT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+        <p>&copy; 2024 Naseer. Built with HTML & Tailwind CSS. Hosted on GitHub Pages.</p>
+        <div class="mt-4 flex justify-center space-x-4">
+            <a href="#" class="hover:text-brand"><i class="fab fa-linkedin text-lg"></i></a>
+            <a href="#" class="hover:text-brand"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="hover:text-brand"><i class="fas fa-envelope text-lg"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts for Dark Mode -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved user preference, if any, on load of the website
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
