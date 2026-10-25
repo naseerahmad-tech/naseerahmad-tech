@@ -1,3 +1,13 @@
-title: My Personal Site
-description: Welcome to my website
+title: Naseer | Developer
+description: Full Stack Developer specializing in .NET & Angular
 theme: minima
+
+# Header Navigation
+header_pages:
+  - index.md
+  - projects.md
+
+# Author Details (Shows on the left sidebar)
+author: Naseer
+github_username: your-username
+linkedin_username: your-linkedin
